@@ -1,0 +1,6 @@
+SELECT Name, COUNT(*)
+FROM creator
+join creator_books1
+on creator.id=creator_books1.creator_id
+group by creator_id
+having count(*)  < 6
